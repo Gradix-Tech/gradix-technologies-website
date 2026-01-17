@@ -12,7 +12,7 @@ const HomePage: React.FC<HomePageProps> = () => {
 
     return (
         <div className='w-10/10 h-auto'>
-            <div className='w-10/10 h-[99vh] py-10 lg:h-screen flex flex-col gap-8 justify-center items-center'
+            <div className='w-10/10 h-[90vh] py-10 lg:h-screen flex flex-col gap-8 justify-center items-center'
                 style={{
                     background: `url("${HomePageBanner}")`,
                     backgroundSize: 'cover',
