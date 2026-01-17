@@ -12,7 +12,7 @@ const HomePage: React.FC<HomePageProps> = () => {
 
     return (
         <div className='w-10/10 h-auto'>
-            <div className='w-10/10 h-auto py-10 lg:h-screen flex flex-col gap-8 justify-center items-center'
+            <div className='w-10/10 h-[99vh] py-10 lg:h-screen flex flex-col gap-8 justify-center items-center'
                 style={{
                     background: `url("${HomePageBanner}")`,
                     backgroundSize: 'cover',
@@ -33,15 +33,15 @@ const HomePage: React.FC<HomePageProps> = () => {
                     <button id="bottone1"><strong className='flex gap-2'>Join Today <ArrowUpRight /></strong></button>
                 </div>
             </div>
-            <div className='w-10/10 py-20 flex flex-col gap-8 justify-center items-center'>
-                <div className='w-9/10 flex flex-col lg:flex-row gap-10'>
+            <div className='w-10/10 py-10 lg:py-20 flex flex-col gap-5 lg:gap-8 justify-center items-center'>
+                <div className='w-9/10 flex flex-col lg:flex-row gap-5 lg:gap-8'>
                     <div className='w-10/10 lg:w-7/10 rounded-xl flex justify-center items-center'
                         style={{
                             background: `url("${Shape1}")`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center'
                         }}>
-                        <div className='w-9/10 lg:w-15/20 py-15 md:py-25'>
+                        <div className='w-9/10 lg:w-15/20 py-10 md:py-25'>
                             <h3 className="inline-block border border-[#0067fc] text-[#0067fc] text-xl font-semibold rounded px-6 py-1">
                                 ABOUT GRADIX
                             </h3>
@@ -53,7 +53,7 @@ const HomePage: React.FC<HomePageProps> = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='w-10/10 lg:w-3/10 flex flex-col gap-8'>
+                    <div className='w-10/10 lg:w-3/10 flex flex-col gap-5 lg:gap-8'>
                         <div className="p-7 md:p-15 flex flex-col items-end rounded-xl bg-[linear-gradient(166deg,#13102A_0%,#090976_54%,#0067FC_100%)]">
                             <div className='text-white text-2xl font-semibold'>
                                 API integration to your business
