@@ -1,8 +1,16 @@
 import React from 'react';
 import HomePageBanner from "../../assets/Images/HomePageBanner.jpg";
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, PlusIcon } from 'lucide-react';
 import Shape1 from "../../assets/Images/Shape1.png";
-
+import Banner2 from "../../assets/Images/Banner2.jpg";
+import bot1 from "../../assets/Images/bot1.png";
+import pencil from "../../assets/Images/pencil.png";
+import mic from "../../assets/Images/mic.png";
+import chat from "../../assets/Images/chat.png";
+import folder from "../../assets/Images/folder.png";
+import Banner3 from "../../assets/Images/Banner3.jpg";
+import team1 from "../../assets/Images/team1.jpg";
+import team2 from "../../assets/Images/team2.jpg";
 
 interface HomePageProps {
 
@@ -42,7 +50,7 @@ const HomePage: React.FC<HomePageProps> = () => {
                             backgroundPosition: 'center'
                         }}>
                         <div className='w-9/10 lg:w-15/20 py-10 md:py-25'>
-                            <h3 className="inline-block border border-[#0067fc] text-[#0067fc] text-xl font-semibold rounded px-6 py-1">
+                            <h3 className="inline-block border border-[#0067fc] uppercase text-[#0067fc] text-xl font-semibold rounded px-6 py-1">
                                 ABOUT GRADIX
                             </h3>
                             <div className='mt-5 text-[#110e28] text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
@@ -81,7 +89,88 @@ const HomePage: React.FC<HomePageProps> = () => {
                     </div>
                 </div>
             </div>
-        </div>
+            <div className='w-10/10 pb-10 lg:pb-20 flex flex-col justify-center items-center'>
+                <h3 className="inline-block border border-[#0067fc] text-[#0067fc] text-xl font-semibold rounded px-6 py-1 uppercase">
+                    Services
+                </h3>
+                <div className='w-9/10 lg:w-5/10 mt-5 text-center text-[#110e28] text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
+                    AI-optimized design for innovative futures
+                </div>
+                <div className='w-9/10 mt-15'>
+                    <div className='w-10/10 flex flex-col lg:flex-row'>
+                        <div style={{
+                            background: `url("${Banner2}")`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center'
+                        }} className='w-full border rounded-xl border-[#dfdfdf] flex justify-center p-10 items-center'>
+                            <div style={{ backdropFilter: "blur(10px)" }} className='bg-transparent w-60 h-60 border border-white flex justify-center items-center rounded-full'>
+                                <div className='absolute animate-spin [animation-duration:20s] text-white'>
+                                    <svg viewBox="0 0 200 200" className="w-64 h-64"><defs>
+                                        <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
+                                    </defs>
+                                        <text fill="white" font-size="16" className="font-bold">
+                                            <textPath href="#circlePath" startOffset="50%" text-anchor="middle">
+                                                Automation & predictive maintenance
+                                            </textPath>
+                                        </text>
+                                    </svg>
+                                </div>
+                                <img className='h-40 w-30 p-2' src={bot1} alt="bot1" />
+                            </div>
+                        </div>
+                        <div className='w-full border rounded-xl border-[#dfdfdf] p-10'>
+                            <img className='w-12' src={pencil} alt="pencil" />
+                            <div className='text-2xl text-[#110e28] font-bold mt-15 hover:text-[#0067fc] transition-colors cursor-pointer'>Ai Development</div>
+                            <div className='text-lg text-[#676872] font-normal mt-5'>
+                                Librarian indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius excuse. AI for speech-to-text.
+                            </div>
+                        </div>
+                        <div className='w-full border rounded-xl border-[#dfdfdf] p-10'>
+                            <img className='w-12' src={folder} alt="pencil" />
+                            <div className='text-2xl text-[#110e28] font-bold mt-15 hover:text-[#0067fc] transition-colors cursor-pointer'>Data Science</div>
+                            <div className='text-lg text-[#676872] font-normal mt-5'>
+                                Librarian indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius excuse. AI for speech-to-text.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='w-9/10'>
+                    <div className='w-10/10 flex flex-col lg:flex-row'>
+                        <div className='w-full border rounded-xl border-[#dfdfdf] p-10'>
+                            <img className='w-12' src={mic} alt="pencil" />
+                            <div className='text-2xl text-[#110e28] font-bold mt-15 hover:text-[#0067fc] transition-colors cursor-pointer'>Machine Learning</div>
+                            <div className='text-lg text-[#676872] font-normal mt-5'>
+                                Librarian indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius excuse. AI for speech-to-text.
+                            </div>
+                        </div>
+                        <div className='w-full border rounded-xl border-[#dfdfdf] p-10'>
+                            <img className='w-12' src={chat} alt="pencil" />
+                            <div className='text-2xl text-[#110e28] font-bold mt-15 hover:text-[#0067fc] transition-colors cursor-pointer'>Chatbot Solutions</div>
+                            <div className='text-lg text-[#676872] font-normal mt-5'>
+                                Librarian indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius excuse. AI for speech-to-text.
+                            </div>
+                        </div>
+                        <div style={{
+                            background: `url("${Banner3}")`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center'
+                        }} className='w-full border rounded-xl border-[#dfdfdf] p-10 flex flex-col justify-center items-start'>
+                            <div className='text-2xl text-white font-bold mt-15 hover:text-[#0067fc] transition-colors cursor-pointer'>Ai Community</div>
+                            <div className='text-lg text-white font-normal mt-5'>
+                                Dive into the art scene and unleash your inner artist!
+                            </div>
+                            <div className='flex mt-5'>
+                                <img className='w-12 h-12 rounded-full border-2 border-white' src={team1} alt="team1" />
+                                <img className='w-12 h-12 rounded-full border-2 border-white -ml-5' src={team2} alt="team2" />
+                                <img className='w-12 h-12 rounded-full border-2 border-white -ml-5' src={team1} alt="team1" />
+                                <img className='w-12 h-12 rounded-full border-2 border-white -ml-5' src={team2} alt="team2" />
+                                <div className='w-12 h-12 rounded-full border-2 border-white -ml-5 bg-[linear-gradient(166deg,#13102A_0%,#090976_54%,#0067FC_100%)] text-white flex justify-center items-center'><PlusIcon width={25} height={25} /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div >
     );
 };
 
