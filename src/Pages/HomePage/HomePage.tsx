@@ -11,12 +11,20 @@ import folder from "../../assets/Images/folder.png";
 import Banner3 from "../../assets/Images/Banner3.jpg";
 import team1 from "../../assets/Images/team1.jpg";
 import team2 from "../../assets/Images/team2.jpg";
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 
 interface HomePageProps {
 
 }
 
 const HomePage: React.FC<HomePageProps> = () => {
+
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.5,
+    });
+
 
     return (
         <div className='w-10/10 h-auto'>
@@ -82,8 +90,8 @@ const HomePage: React.FC<HomePageProps> = () => {
                                 Seamless Integration
                             </div>
                             <div className='border border-[#cddff3]'></div>
-                            <div className='text-center text-[#0067fc] font-bold text-6xl'>
-                                28K
+                            <div ref={ref} className="text-center text-[#0067fc] font-bold text-6xl">
+                                <CountUp start={inView ? 0 : undefined} end={25} duration={2} suffix="K" />
                             </div>
                         </div>
                     </div>
@@ -96,8 +104,8 @@ const HomePage: React.FC<HomePageProps> = () => {
                 <div className='w-9/10 lg:w-5/10 mt-5 text-center text-[#110e28] text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
                     AI-optimized design for innovative futures
                 </div>
-                <div className='w-9/10 mt-15'>
-                    <div className='w-10/10 flex flex-col lg:flex-row'>
+                <div className='w-9/10 sm:w-7/10 lg:w-9/10 mt-15'>
+                    <div className='w-10/10 gap-5 lg:gap-0 flex flex-col lg:flex-row'>
                         <div style={{
                             background: `url("${Banner2}")`,
                             backgroundSize: 'cover',
@@ -134,8 +142,8 @@ const HomePage: React.FC<HomePageProps> = () => {
                         </div>
                     </div>
                 </div>
-                <div className='w-9/10'>
-                    <div className='w-10/10 flex flex-col lg:flex-row'>
+                <div className='w-9/10 sm:w-7/10 lg:w-9/10 mt-5 lg:mt-0'>
+                    <div className='w-10/10 gap-5 lg:gap-0 flex flex-col lg:flex-row'>
                         <div className='w-full border rounded-xl border-[#dfdfdf] p-10'>
                             <img className='w-12' src={mic} alt="pencil" />
                             <div className='text-2xl text-[#110e28] font-bold mt-15 hover:text-[#0067fc] transition-colors cursor-pointer'>Machine Learning</div>
@@ -155,7 +163,7 @@ const HomePage: React.FC<HomePageProps> = () => {
                             backgroundSize: 'cover',
                             backgroundPosition: 'center'
                         }} className='w-full border rounded-xl border-[#dfdfdf] p-10 flex flex-col justify-center items-start'>
-                            <div className='text-2xl text-white font-bold mt-15 hover:text-[#0067fc] transition-colors cursor-pointer'>Ai Community</div>
+                            <div className='text-2xl text-white font-bold mt-10 hover:text-[#0067fc] transition-colors cursor-pointer'>Ai Community</div>
                             <div className='text-lg text-white font-normal mt-5'>
                                 Dive into the art scene and unleash your inner artist!
                             </div>
@@ -166,6 +174,7 @@ const HomePage: React.FC<HomePageProps> = () => {
                                 <img className='w-12 h-12 rounded-full border-2 border-white -ml-5' src={team2} alt="team2" />
                                 <div className='w-12 h-12 rounded-full border-2 border-white -ml-5 bg-[linear-gradient(166deg,#13102A_0%,#090976_54%,#0067FC_100%)] text-white flex justify-center items-center'><PlusIcon width={25} height={25} /></div>
                             </div>
+                            <div className='text-lg text-white font-bold mt-2 hover:text-[#0067fc] transition-colors cursor-pointer'>Over 40M+ users</div>
                         </div>
                     </div>
                 </div>
