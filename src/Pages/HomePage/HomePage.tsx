@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import HomePageBanner from "../../assets/Images/HomePageBanner.jpg";
 import { ArrowUpRight, PlusIcon } from 'lucide-react';
 import Shape1 from "../../assets/Images/Shape1.png";
@@ -20,6 +20,7 @@ import Project3 from '../../assets/Images/project3.jpg';
 import UserFab from '../../Components/Fab/UserFab';
 import face from "../../assets/Images/face.png";
 import TestimonialSlider from '../../Components/TestimonialCard/TestimonialCard';
+import shape2 from "../../assets/Images/Shape2.png"
 
 interface HomePageProps {
 
@@ -56,6 +57,26 @@ const HomePage: React.FC<HomePageProps> = () => {
         },
     ];
 
+    const keyfeatures = [
+        {
+            title: "What is Artificial Intelligence?",
+            description: "Bennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out.",
+        },
+        {
+            title: "What It Takes to Create an Image?",
+            description: "Cennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out.",
+        },
+        {
+            title: "How does AI Convert text to video?",
+            description: "Tennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out.",
+        }
+    ]
+
+    const [activeIndex, setActiveIndex] = useState<number | null>(0);
+
+    const handleToggle = (index: number) => {
+        setActiveIndex(prev => (prev === index ? null : index));
+    };
 
     return (
         <div className='w-10/10 h-auto'>
@@ -401,10 +422,10 @@ const HomePage: React.FC<HomePageProps> = () => {
                 </div>
             </div>
 
-            <div className='mb-10 lg:mb-20 w-10/10 h-auto py-20 lg:py-0 lg:h-screen bg-[linear-gradient(115deg,#004769,#000000)] flex justify-center items-center'>
+            <div className='w-10/10 h-auto py-20 lg:pt-0 lg:h-screen bg-[linear-gradient(115deg,#004769,#000000)] flex justify-center items-center'>
                 <div className='w-9/10 flex flex-col lg:flex-row gap-10 justify-between'>
                     <div className='w-10/10 lg:w-4/10 flex justify-center items-center'>
-                        <img className='w-8/10 sm:4/10 lg:w-10/10' src={face} alt="face" />
+                        <img data-aos="zoom-in" data-aos-delay="700" className='w-4/10 lg:w-10/10' src={face} alt="face" />
                     </div>
                     <div className='w-10/10 lg:w-5/10 flex flex-col justify-center items-start'>
                         <h3 className="inline-block border border-[#0067fc] text-[#0067fc] text-xl font-semibold rounded px-6 py-1 uppercase">
@@ -416,6 +437,58 @@ const HomePage: React.FC<HomePageProps> = () => {
                         <div className='w-10/10'>
                             <TestimonialSlider reviews={reviews} />
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className='py-10 lg:py-20 bg-[#f0f2f4] flex justify-center items-center' style={{
+                background: `url("${shape2}")`,
+                backgroundSize: "contain",
+                backgroundPosition: "bottom bottom",
+                backgroundRepeat: "no-repeat",
+            }}>
+                <div className='w-9/10 flex flex-col lg:flex-row justify-between'>
+                    <div className='w-10/10 lg:w-4/10'>
+                        <h3 className="inline-block border border-[#0067fc] text-[#0067fc] text-xl font-semibold rounded px-6 py-1 uppercase">
+                            Question & Answer
+                        </h3>
+                        <div className='mt-5 text-start text-[#110e28] text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
+                            AI queries? expert responses await
+                        </div>
+
+                        <div className='mt-10 lg:mt-20'>
+                            <button id="bottoneb">
+                                <strong className="flex gap-2">
+                                    All Questions <ArrowUpRight />
+                                </strong>
+                            </button>
+                        </div>
+                    </div>
+                    <div className='w-10/10 lg:w-5/10 mt-10 lg:mt-0'>
+                        <section className="w-full divide-y rounded-2xl">
+                            {
+                                keyfeatures.map((feature, index) => (
+                                    <details
+                                        className={`p-6 mt-3 group text-white ${activeIndex === index ? 'bg-[linear-gradient(90deg,#5460F9,#12B3EB)] text-white' : 'bg-[#ebebf5] text-black'} rounded-2xl`}
+                                        open={activeIndex === index}
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            handleToggle(index);
+                                        }}
+                                    >
+                                        <summary className={`${activeIndex === index ? 'text-white' : 'text-black'} relative text-xl font-semibold flex items-center cursor-pointer list-none gap-4 pr-8 [&::-webkit-details-marker]:hidden`}>
+                                            {/* {feature.logo} */}
+                                            {feature.title}
+                                            <span className={`absolute right-0 transition-transform group-open:rotate-45 h-7 w-7 flex justify-center ${activeIndex === index ? 'bg-[#ebebf5] text-black' : 'bg-[linear-gradient(90deg,#5460F9,#12B3EB)] text-white'}  items-center rounded-full`}><PlusIcon /></span>
+                                        </summary>
+                                        <div className='border-t border-white mt-4'></div>
+                                        <p className="mt-4">
+                                            {feature.description}
+                                        </p>
+                                    </details>
+                                ))
+                            }
+                        </section>
                     </div>
                 </div>
             </div>
