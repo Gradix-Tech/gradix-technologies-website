@@ -80,7 +80,7 @@ const HomePage: React.FC<HomePageProps> = () => {
                         </div>
                     </div>
                     <div className='w-10/10 lg:w-3/10 flex flex-col gap-5 lg:gap-8'>
-                        <div className="p-7 md:p-15 flex flex-col items-end rounded-xl bg-[linear-gradient(166deg,#13102A_0%,#090976_54%,#0067FC_100%)]">
+                        <div className="p-7 md:p-15 flex flex-col items-end rounded-xl bg-[linear-gradient(90deg,#5460F9,#12B3EB)]">
                             <div className='text-white text-2xl font-semibold'>
                                 API integration to your business
                             </div>
@@ -183,7 +183,7 @@ const HomePage: React.FC<HomePageProps> = () => {
                                 <img className='w-12 h-12 rounded-full border-2 border-white -ml-5' src={team2} alt="team2" />
                                 <img className='w-12 h-12 rounded-full border-2 border-white -ml-5' src={team1} alt="team1" />
                                 <img className='w-12 h-12 rounded-full border-2 border-white -ml-5' src={team2} alt="team2" />
-                                <div className='w-12 h-12 rounded-full border-2 border-white -ml-5 bg-[linear-gradient(166deg,#13102A_0%,#090976_54%,#0067FC_100%)] text-white flex justify-center items-center'><PlusIcon width={25} height={25} /></div>
+                                <div className='w-12 h-12 rounded-full border-2 border-white -ml-5 bg-[linear-gradient(90deg,#5460F9,#12B3EB)] text-white flex justify-center items-center'><PlusIcon width={25} height={25} /></div>
                             </div>
                             <div className='text-lg text-white font-bold mt-2 hover:text-[#0067fc] transition-colors cursor-pointer'>Over 40M+ users</div>
                         </div>
@@ -251,7 +251,7 @@ const HomePage: React.FC<HomePageProps> = () => {
                             <div className='mt-5 text-[#110e28] text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
                                 Best projects for intelligent
                             </div>
-                            <div ref={bref} className="mt-15 w-70 text-center py-3 rounded-2xl bg-[red] text-white font-bold text-6xl  bg-[linear-gradient(166deg,#13102A_0%,#090976_54%,#0067FC_100%)]">
+                            <div ref={bref} className="mt-15 w-70 text-center py-3 rounded-2xl bg-[red] text-white font-bold text-6xl  bg-[linear-gradient(90deg,#5460F9,#12B3EB)]">
                                 <CountUp start={binView ? 0 : undefined} end={2650} duration={2} suffix="+" />
                             </div>
                             <div className='mt-5 text-[#110e28] text-2xl font-semibold'>
