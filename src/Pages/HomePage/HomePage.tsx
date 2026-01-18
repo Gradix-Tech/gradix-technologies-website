@@ -9,7 +9,7 @@ import mic from "../../assets/Images/mic.png";
 import chat from "../../assets/Images/chat.png";
 import folder from "../../assets/Images/folder.png";
 import Banner3 from "../../assets/Images/Banner3.jpg";
-import Banner4 from "../../assets/Images/Banner4.jpg";
+import Banner4 from "../../assets/Images/banner4.jpg";
 import team1 from "../../assets/Images/team1.jpg";
 import team2 from "../../assets/Images/team2.jpg";
 import CountUp from 'react-countup';
