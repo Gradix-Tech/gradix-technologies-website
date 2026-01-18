@@ -509,11 +509,11 @@ const HomePage: React.FC<HomePageProps> = () => {
                         News & Update
                     </div>
                     <div className='w-9/10 mt-10'>
-                        <div className='w-10/10 p-10 flex flex-col lg:flex-row gap-10'>
+                        <div className='w-10/10 p-2 sm:p-10 flex flex-col lg:flex-row gap-10'>
                             <div className=' w-10/10 lg:w-4/10' data-aos="zoom-in" data-aos-delay="800">
                                 <img className='rounded-2xl' src={news1} alt="news" />
                             </div>
-                            <div data-aos="fade-left" data-aos-delay="800" className=' w-10/10 lg:w-5/10 flex gap-5 flex-col justify-center'>
+                            <div data-aos="fade-right" data-aos-delay="800" className=' w-10/10 lg:w-5/10 flex gap-5 flex-col justify-center'>
                                 <div className='flex gap-5 items-center'>
                                     <div className=' inline-block rounded-lg text-white px-3 py-1 bg-[linear-gradient(90deg,#5460F9,#12B3EB)]'>Technology</div>
                                     <div className='text-[#70707a]'>
@@ -529,11 +529,11 @@ const HomePage: React.FC<HomePageProps> = () => {
                             </div>
                         </div>
                         <div className='w-9/10 h-px bg-[#e5e3fe]'></div>
-                        <div className='w-10/10 p-10 flex flex-col lg:flex-row gap-10'>
+                        <div className='w-10/10 p-2 sm:p-10 flex flex-col lg:flex-row gap-10'>
                             <div className=' w-10/10 lg:w-4/10' data-aos="zoom-in" data-aos-delay="1000">
                                 <img className='rounded-2xl' src={news2} alt="news" />
                             </div>
-                            <div data-aos="fade-left" data-aos-delay="1000" className=' w-10/10 lg:w-5/10 flex gap-5 flex-col justify-center'>
+                            <div data-aos="fade-right" data-aos-delay="1000" className=' w-10/10 lg:w-5/10 flex gap-5 flex-col justify-center'>
                                 <div className='flex gap-5 items-center'>
                                     <div className=' inline-block rounded-lg text-white px-3 py-1 bg-[linear-gradient(90deg,#5460F9,#12B3EB)]'>Technology</div>
                                     <div className='text-[#70707a]'>
@@ -549,11 +549,11 @@ const HomePage: React.FC<HomePageProps> = () => {
                             </div>
                         </div>
                         <div className='w-9/10 h-px bg-[#e5e3fe]'></div>
-                        <div className='w-10/10 p-10 flex flex-col lg:flex-row gap-10'>
+                        <div className='w-10/10 p-2 sm:p-10 flex flex-col lg:flex-row gap-10'>
                             <div className=' w-10/10 lg:w-4/10' data-aos="zoom-in" data-aos-delay="1000">
                                 <img className='rounded-2xl' src={news3} alt="news" />
                             </div>
-                            <div data-aos="fade-left" data-aos-delay="1000" className=' w-10/10 lg:w-5/10 flex gap-5 flex-col justify-center'>
+                            <div data-aos="fade-right" data-aos-delay="1000" className=' w-10/10 lg:w-5/10 flex gap-5 flex-col justify-center'>
                                 <div className='flex gap-5 items-center'>
                                     <div className=' inline-block rounded-lg text-white px-3 py-1 bg-[linear-gradient(90deg,#5460F9,#12B3EB)]'>Technology</div>
                                     <div className='text-[#70707a]'>
