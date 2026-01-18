@@ -77,3 +77,16 @@
   transform: scale(0.97);
   box-shadow: 5px 3px 54px -12px #110e28;
 }
+
+.process-style-one-item h2 {
+  display: block;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+  font-weight: 900;
+  writing-mode: vertical-rl;
+  font-size: 60px;
+  line-height: 0.7;
+  transform: rotateZ(180deg);
+  min-height: 85px;
+  margin-bottom: 30px;
+}

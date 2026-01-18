@@ -9,6 +9,7 @@ import mic from "../../assets/Images/mic.png";
 import chat from "../../assets/Images/chat.png";
 import folder from "../../assets/Images/folder.png";
 import Banner3 from "../../assets/Images/Banner3.jpg";
+import Banner4 from "../../assets/Images/Banner4.jpg";
 import team1 from "../../assets/Images/team1.jpg";
 import team2 from "../../assets/Images/team2.jpg";
 import CountUp from 'react-countup';
@@ -175,6 +176,55 @@ const HomePage: React.FC<HomePageProps> = () => {
                                 <div className='w-12 h-12 rounded-full border-2 border-white -ml-5 bg-[linear-gradient(166deg,#13102A_0%,#090976_54%,#0067FC_100%)] text-white flex justify-center items-center'><PlusIcon width={25} height={25} /></div>
                             </div>
                             <div className='text-lg text-white font-bold mt-2 hover:text-[#0067fc] transition-colors cursor-pointer'>Over 40M+ users</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style={{
+                background: `url("${Banner4}")`,
+                backgroundSize: 'zoom',
+                backgroundPosition: 'start'
+            }} className='w-10/10 h-auto mb-20 flex flex-col justify-center items-center pt-30'>
+                <div className='w-8/10 md:w-6/10 lg:w-4/10'>
+                    <h3 className="inline-block border border-white text-white text-xl font-semibold rounded px-6 py-1 uppercase">
+                        How it works
+                    </h3>
+                    <div className='mt-5 text-start text-white text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
+                        Crafting smarter AI through our process
+                    </div>
+                </div>
+                <div style={{ backdropFilter: "blur(60px)" }} className='w-9/10 h-full flex-col lg:flex-row mt-20 bg-transparent rounded-tl-2xl gap-10 rounded-tr-2xl flex justify-center items-center p-5 md:p-20'>
+                    <div className='w-full h-full process-style-one-item'>
+                        <h2>01</h2>
+                        <div className='text-white text-2xl font-semibold'>
+                            Discovery & Strategy
+                        </div>
+                        <div className='text-sm text-light text-white mt-2 tracking-wider leading-6 font-light'>
+                            Librarian indulged speaking the was out horrible for domestic are regular position. Seeing rather her you not esteem men settle genius excuse at the perfection for standard.
+                        </div>
+                    </div>
+                    <div className='flex flex-col lg:flex-row gap-10 justify-center items-center'>
+                        <div className="w-px h-62.5 hidden lg:block bg-linear-to-b from-transparent via-white/30 to-transparent"></div>
+                        <div className="w-full h-px block lg:hidden bg-linear-to-r from-transparent via-white/30 to-transparent"></div>
+                        <div className='w-full h-full process-style-one-item border-white'>
+                            <h2>02</h2>
+                            <div className='text-white text-2xl font-semibold'>
+                                Custom AI Development
+                            </div>
+                            <div className='text-sm text-light text-white mt-2 tracking-wider leading-6 font-light'>
+                                Perfection indulged speaking was out horrible for domestic are regular position. Seeing rather her you not esteem men settle genius excuse at the perfection for standard.
+                            </div>
+                        </div>
+                        <div className="w-px h-62.5 hidden lg:block bg-linear-to-b from-transparent via-white/30 to-transparent"></div>
+                        <div className="w-full h-px block lg:hidden bg-linear-to-r from-transparent via-white/30 to-transparent"></div>
+                    </div>
+                    <div className='w-full h-full process-style-one-item'>
+                        <h2>03</h2>
+                        <div className='text-white text-2xl font-semibold'>
+                            Optimization & Support
+                        </div>
+                        <div className='text-sm text-light text-white mt-2 tracking-wider leading-6 font-light'>
+                            Artificial indulged speaking the was out horrible for domestic are regular position. Seeing rather her you not esteem men settle genius excuse at the perfection for standard.
                         </div>
                     </div>
                 </div>
