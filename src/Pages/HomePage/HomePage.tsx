@@ -19,8 +19,15 @@ import Project2 from '../../assets/Images/project2.jpg';
 import Project3 from '../../assets/Images/project3.jpg';
 import UserFab from '../../Components/Fab/UserFab';
 import face from "../../assets/Images/face.png";
+import news1 from "../../assets/Images/news1.jpg"
+import news2 from "../../assets/Images/news2.jpg"
+import news3 from "../../assets/Images/news3.jpg"
 import TestimonialSlider from '../../Components/TestimonialCard/TestimonialCard';
 import shape2 from "../../assets/Images/Shape2.png"
+import globe from "../../assets/Images/globe.png"
+import Logo from "../../assets/Images/GRADIX_WHITE.png";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaRegCopyright } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 interface HomePageProps {
 
@@ -103,7 +110,7 @@ const HomePage: React.FC<HomePageProps> = () => {
             </div>
             <div className='w-10/10 py-10 lg:py-20 flex flex-col gap-5 lg:gap-8 justify-center items-center'>
                 <div className='w-9/10 flex flex-col lg:flex-row gap-5 lg:gap-8'>
-                    <div className='w-10/10 lg:w-7/10 rounded-xl flex justify-center items-center'
+                    <div data-aos="fade-up" className='w-10/10 lg:w-7/10 rounded-xl flex justify-center items-center'
                         style={{
                             background: `url("${Shape1}")`,
                             backgroundSize: 'cover',
@@ -122,7 +129,7 @@ const HomePage: React.FC<HomePageProps> = () => {
                         </div>
                     </div>
                     <div className='w-10/10 lg:w-3/10 flex flex-col gap-5 lg:gap-8'>
-                        <div className="p-7 md:p-15 flex flex-col items-end rounded-xl bg-[linear-gradient(90deg,#5460F9,#12B3EB)]">
+                        <div data-aos="fade-up" className="p-7 md:p-15 flex flex-col items-end rounded-xl bg-[linear-gradient(90deg,#5460F9,#12B3EB)]">
                             <div className='text-white text-2xl font-semibold'>
                                 API integration to your business
                             </div>
@@ -133,7 +140,7 @@ const HomePage: React.FC<HomePageProps> = () => {
                                 <button id="bottone1"><strong className='flex gap-2'>Join Today <ArrowUpRight /></strong></button>
                             </div>
                         </div>
-                        <div className='p-7 md:p-15 flex flex-col gap-7 lg:gap-0 justify-between w-10/10 h-full rounded-xl' style={{
+                        <div data-aos="fade-up" className='p-7 md:p-15 flex flex-col gap-7 lg:gap-0 justify-between w-10/10 h-full rounded-xl' style={{
                             background: `url("${Shape1}")`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center'
@@ -154,10 +161,10 @@ const HomePage: React.FC<HomePageProps> = () => {
                 <h3 className="inline-block border border-[#0067fc] text-[#0067fc] text-xl font-semibold rounded px-6 py-1 uppercase">
                     Services
                 </h3>
-                <div className='w-9/10 lg:w-5/10 mt-5 text-center text-[#110e28] text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
+                <div data-aos="fade-right" className='w-9/10 lg:w-5/10 mt-5 text-center text-[#110e28] text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
                     AI-optimized design for innovative futures
                 </div>
-                <div className='w-9/10 sm:w-7/10 lg:w-9/10 mt-15'>
+                <div data-aos="fade-up" className='w-9/10 sm:w-7/10 lg:w-9/10 mt-15'>
                     <div className='w-10/10 gap-5 lg:gap-0 flex flex-col lg:flex-row'>
                         <div style={{
                             background: `url("${Banner2}")`,
@@ -195,7 +202,7 @@ const HomePage: React.FC<HomePageProps> = () => {
                         </div>
                     </div>
                 </div>
-                <div className='w-9/10 sm:w-7/10 lg:w-9/10 mt-5 lg:mt-0'>
+                <div data-aos="fade-up" className='w-9/10 sm:w-7/10 lg:w-9/10 mt-5 lg:mt-0'>
                     <div className='w-10/10 gap-5 lg:gap-0 flex flex-col lg:flex-row'>
                         <div className='w-full border rounded-xl border-[#dfdfdf] p-10'>
                             <img className='w-12' src={mic} alt="pencil" />
@@ -241,11 +248,11 @@ const HomePage: React.FC<HomePageProps> = () => {
                     <h3 className="inline-block border border-white text-white text-xl font-semibold rounded px-6 py-1 uppercase">
                         How it works
                     </h3>
-                    <div className='mt-5 text-start text-white text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
+                    <div data-aos="fade-right" className='mt-5 text-start text-white text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
                         Crafting smarter AI through our process
                     </div>
                 </div>
-                <div style={{ backdropFilter: "blur(60px)" }} className='w-9/10 h-full flex-col lg:flex-row mt-20 bg-transparent rounded-tl-2xl gap-10 rounded-tr-2xl flex justify-center items-center p-5 md:p-20'>
+                <div data-aos="fade-up" data-aos-delay="300" style={{ backdropFilter: "blur(60px)" }} className='w-9/10 h-full flex-col lg:flex-row mt-20 bg-transparent rounded-tl-2xl gap-10 rounded-tr-2xl flex justify-center items-center p-5 md:p-20'>
                     <div className='w-full h-full process-style-one-item'>
                         <h2>01</h2>
                         <div className='text-white text-2xl font-semibold'>
@@ -290,7 +297,7 @@ const HomePage: React.FC<HomePageProps> = () => {
                             <h3 className="inline-block border border-[#0067fc] uppercase text-[#0067fc] text-xl font-semibold rounded px-6 py-1">
                                 Latest Projects
                             </h3>
-                            <div className='mt-5 text-[#110e28] text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
+                            <div data-aos="fade-right" className='mt-5 text-[#110e28] text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
                                 Best projects for intelligent
                             </div>
                             <div ref={bref} className="mt-15 w-70 text-center py-3 rounded-2xl bg-[red] text-white font-bold text-6xl  bg-[linear-gradient(90deg,#5460F9,#12B3EB)]">
@@ -371,10 +378,10 @@ const HomePage: React.FC<HomePageProps> = () => {
                 <h3 className="inline-block border border-[#0067fc] text-[#0067fc] text-xl font-semibold rounded px-6 py-1 uppercase">
                     AI Developer
                 </h3>
-                <div className='w-9/10 lg:w-5/10 mt-5 text-center text-[#110e28] text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
+                <div data-aos="fade-right" data-aos-delay="300" className='w-9/10 lg:w-5/10 mt-5 text-center text-[#110e28] text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
                     Meet our talent for the intelligent solutions
                 </div>
-                <div className='w-9/10 mt-10 flex flex-col lg:flex-row items-start'>
+                <div data-aos="fade-up" data-aos-delay="600" className='w-9/10 mt-10 flex flex-col lg:flex-row items-start'>
                     <div className='w-10/10 lg:w-2/10 flex flex-col justify-center items-center'>
                         <div className="w-full flex justify-center">
                             <UserFab profileImageUrl={team2} imageSize="h-50 lg:h-50" />
@@ -422,16 +429,16 @@ const HomePage: React.FC<HomePageProps> = () => {
                 </div>
             </div>
 
-            <div className='w-10/10 h-auto py-20 lg:pt-0 lg:h-screen bg-[linear-gradient(115deg,#004769,#000000)] flex justify-center items-center'>
-                <div className='w-9/10 flex flex-col lg:flex-row gap-10 justify-between'>
+            <div className='w-10/10 h-auto py-20 lg:py-0 lg:h-screen bg-[linear-gradient(115deg,#004769,#000000)] flex justify-center items-center'>
+                <div className='w-9/10 h-auto flex flex-col lg:flex-row gap-10 items-center justify-between'>
                     <div className='w-10/10 lg:w-4/10 flex justify-center items-center'>
-                        <img data-aos="zoom-in" data-aos-delay="700" className='w-4/10 lg:w-10/10' src={face} alt="face" />
+                        <img data-aos="zoom-in" data-aos-delay="600" className='w-4/10 lg:w-10/10' src={face} alt="face" />
                     </div>
                     <div className='w-10/10 lg:w-5/10 flex flex-col justify-center items-start'>
                         <h3 className="inline-block border border-[#0067fc] text-[#0067fc] text-xl font-semibold rounded px-6 py-1 uppercase">
                             Testimonials
                         </h3>
-                        <div className='mt-5 text-center text-white text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
+                        <div data-aos="fade-right" data-aos-delay="600" className='mt-5 text-center text-white text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
                             What People Say
                         </div>
                         <div className='w-10/10'>
@@ -443,8 +450,8 @@ const HomePage: React.FC<HomePageProps> = () => {
 
             <div className='py-10 lg:py-20 bg-[#f0f2f4] flex justify-center items-center' style={{
                 background: `url("${shape2}")`,
-                backgroundSize: "contain",
-                backgroundPosition: "bottom bottom",
+                backgroundSize: "fit",
+                backgroundPosition: "left bottom",
                 backgroundRepeat: "no-repeat",
             }}>
                 <div className='w-9/10 flex flex-col lg:flex-row justify-between'>
@@ -452,11 +459,11 @@ const HomePage: React.FC<HomePageProps> = () => {
                         <h3 className="inline-block border border-[#0067fc] text-[#0067fc] text-xl font-semibold rounded px-6 py-1 uppercase">
                             Question & Answer
                         </h3>
-                        <div className='mt-5 text-start text-[#110e28] text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
+                        <div data-aos="fade-right" data-aos-delay="600" className='mt-5 text-start text-[#110e28] text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
                             AI queries? expert responses await
                         </div>
 
-                        <div className='mt-10 lg:mt-20'>
+                        <div data-aos="fade-right" data-aos-delay="800" className='mt-10 lg:mt-20'>
                             <button id="bottoneb">
                                 <strong className="flex gap-2">
                                     All Questions <ArrowUpRight />
@@ -465,7 +472,7 @@ const HomePage: React.FC<HomePageProps> = () => {
                         </div>
                     </div>
                     <div className='w-10/10 lg:w-5/10 mt-10 lg:mt-0'>
-                        <section className="w-full divide-y rounded-2xl">
+                        <section data-aos="fade-up" data-aos-delay="600" className="w-full divide-y rounded-2xl">
                             {
                                 keyfeatures.map((feature, index) => (
                                     <details
@@ -489,6 +496,148 @@ const HomePage: React.FC<HomePageProps> = () => {
                                 ))
                             }
                         </section>
+                    </div>
+                </div>
+            </div>
+
+            <div className='py-20 flex justify-center items-center'>
+                <div className='w-9/10 flex flex-col justify-center items-center'>
+                    <h3 className="inline-block border border-[#0067fc] text-[#0067fc] text-xl font-semibold rounded px-6 py-1 uppercase">
+                        Latest Blog
+                    </h3>
+                    <div data-aos="fade-right" data-aos-delay="800" className='mt-5 text-center text-[#110e28] text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
+                        News & Update
+                    </div>
+                    <div className='w-9/10 mt-10'>
+                        <div className='w-10/10 p-10 flex flex-col lg:flex-row gap-10'>
+                            <div className=' w-10/10 lg:w-4/10' data-aos="zoom-in" data-aos-delay="800">
+                                <img className='rounded-2xl' src={news1} alt="news" />
+                            </div>
+                            <div data-aos="fade-left" data-aos-delay="800" className=' w-10/10 lg:w-5/10 flex gap-5 flex-col justify-center'>
+                                <div className='flex gap-5 items-center'>
+                                    <div className=' inline-block rounded-lg text-white px-3 py-1 bg-[linear-gradient(90deg,#5460F9,#12B3EB)]'>Technology</div>
+                                    <div className='text-[#70707a]'>
+                                        06 December, 2025
+                                    </div>
+                                </div>
+                                <div className='text-start text-[#110e28] text-xl md:text-3xl font-semibold'>
+                                    Considered imprudence of technical friendship experience.
+                                </div>
+                                <div className='text-lg text-[#60616c] font-semibold flex gap-2 uppercase cursor-pointer'>
+                                    Explore More <ArrowUpRight />
+                                </div>
+                            </div>
+                        </div>
+                        <div className='w-9/10 h-px bg-[#e5e3fe]'></div>
+                        <div className='w-10/10 p-10 flex flex-col lg:flex-row gap-10'>
+                            <div className=' w-10/10 lg:w-4/10' data-aos="zoom-in" data-aos-delay="1000">
+                                <img className='rounded-2xl' src={news2} alt="news" />
+                            </div>
+                            <div data-aos="fade-left" data-aos-delay="1000" className=' w-10/10 lg:w-5/10 flex gap-5 flex-col justify-center'>
+                                <div className='flex gap-5 items-center'>
+                                    <div className=' inline-block rounded-lg text-white px-3 py-1 bg-[linear-gradient(90deg,#5460F9,#12B3EB)]'>Technology</div>
+                                    <div className='text-[#70707a]'>
+                                        06 December, 2025
+                                    </div>
+                                </div>
+                                <div className='text-start text-[#110e28] text-xl md:text-3xl font-semibold'>
+                                    Considered imprudence of technical friendship experience.
+                                </div>
+                                <div className='text-lg text-[#60616c] font-semibold flex gap-2 uppercase cursor-pointer'>
+                                    Explore More <ArrowUpRight />
+                                </div>
+                            </div>
+                        </div>
+                        <div className='w-9/10 h-px bg-[#e5e3fe]'></div>
+                        <div className='w-10/10 p-10 flex flex-col lg:flex-row gap-10'>
+                            <div className=' w-10/10 lg:w-4/10' data-aos="zoom-in" data-aos-delay="1000">
+                                <img className='rounded-2xl' src={news3} alt="news" />
+                            </div>
+                            <div data-aos="fade-left" data-aos-delay="1000" className=' w-10/10 lg:w-5/10 flex gap-5 flex-col justify-center'>
+                                <div className='flex gap-5 items-center'>
+                                    <div className=' inline-block rounded-lg text-white px-3 py-1 bg-[linear-gradient(90deg,#5460F9,#12B3EB)]'>Technology</div>
+                                    <div className='text-[#70707a]'>
+                                        06 December, 2025
+                                    </div>
+                                </div>
+                                <div className='text-start text-[#110e28] text-xl md:text-3xl font-semibold'>
+                                    Considered imprudence of technical friendship experience.
+                                </div>
+                                <div className='text-lg text-[#60616c] font-semibold flex gap-2 uppercase cursor-pointer'>
+                                    Explore More <ArrowUpRight />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div className='w-10/10 flex justify-center items-center'>
+                <div className="relative w-10/10 lg:w-19/20 rounded-t-4xl overflow-hidden bg-[linear-gradient(0deg,rgba(17,19,21,1)_0%,rgba(20,20,67,1)_6%,rgba(17,19,21,1)_60%)]">
+
+                    {/* Globe image bottom-right */}
+                    <img
+                        src={globe}
+                        alt="globe"
+                        className="absolute bottom-0 right-0 opacity-80 pointer-events-none"
+                    />
+
+                    {/* Content */}
+                    <div className="relative mt-20 z-10 p-10 text-white">
+                        <div className='w-10/10 flex flex-wrap flex-col lg:flex-row gap-5'>
+                            <div className='w-10/10 lg:w-9/20 pr-0 md:pr-10'>
+                                <div className='text-xl font-semibold text-white'>Contact</div>
+                                <div className='mt-5 text-lg font-normal text-[#cad7d9]'>128 Kuaram old Road, parkvenue, Greater London, NW18JR Puran, United Kingdom </div>
+                                <div className='mt-5 text-lg font-normal text-[#cad7d9]'>Phone Number</div>
+                                <div className='mt-1 text-xl font-semibold text-white'>+012-3455700</div>
+                                <div className='mt-5 text-lg font-normal text-[#cad7d9]'>Email</div>
+                                <div className='mt-1 text-xl font-semibold text-white'>info@robok.com</div>
+                            </div>
+                            <div className='w-10/10 lg:w-3/20 mt-5 lg:mt-0'>
+                                <div className='text-xl font-semibold text-white'>Company</div>
+                                <div className='mt-5 text-lg font-normal text-[#cad7d9]'>About</div>
+                                <div className='mt-2 text-lg font-normal text-[#cad7d9]'>Expertise</div>
+                                <div className='mt-2 text-lg font-normal text-[#cad7d9]'>Sustainability</div>
+                            </div>
+                            <div className='w-10/10 lg:w-3/20 mt-5 lg:mt-0'>
+                                <div className='text-xl font-semibold text-white'>Company</div>
+                                <div className='mt-5 text-lg font-normal text-[#cad7d9]'>About</div>
+                                <div className='mt-2 text-lg font-normal text-[#cad7d9]'>Expertise</div>
+                                <div className='mt-2 text-lg font-normal text-[#cad7d9]'>Sustainability</div>
+                            </div>
+                            <div className='w-10/10 lg:w-3/20 mt-5 lg:mt-0'>
+                                <div className='text-xl font-semibold text-white'>Company</div>
+                                <div className='mt-5 text-lg font-normal text-[#cad7d9]'>About</div>
+                                <div className='mt-2 text-lg font-normal text-[#cad7d9]'>Expertise</div>
+                                <div className='mt-2 text-lg font-normal text-[#cad7d9]'>Sustainability</div>
+                            </div>
+                        </div>
+                        <div className="mt-20 w-full h-px bg-[#a9a9a9]"></div>
+                        <div className='mt-5 w-10/10 flex flex-col md:flex-row justify-center md:justify-between items-center gap-y-10'>
+                            <img
+                                className="w-40"
+                                src={Logo}
+                                alt="Logo"
+                            />
+                            <div className='w-10/10 md:w-auto justify-center items-center gap-5 ml-auto flex text-3xl '>
+                                <FaFacebookF />
+                                <FaXTwitter />
+                                <FaInstagram />
+                                <FaLinkedinIn />
+                            </div>
+                        </div>
+                        <div className="mt-5 w-full h-px bg-[#a9a9a9]"></div>
+                        <div className='mt-5 w-10/10 flex flex-col lg:flex-row gap-5 justify-center lg:justify-between'>
+                            <div className='flex gap-1 justify-center items-center'>
+                                <FaRegCopyright /> Gradix Technologies {new Date().getFullYear()}. All Rights Reserved
+                            </div>
+                            <div className='flex justify-center items-center gap-5'>
+                                <div className='text-lg font-normal text-[#cad7d9]'>Terms</div>
+                                <div className='text-lg font-normal text-[#cad7d9]'>Privacy</div>
+                                <div className='text-lg font-normal text-[#cad7d9]'>Support</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
