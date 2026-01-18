@@ -96,7 +96,7 @@ const NavBar: React.FC = () => {
                             <img
                                 className="h-15 cursor-pointer"
                                 onClick={() => handleNavigate("/")}
-                                src={scrolled ? LogoColor : Logo}
+                                src={LogoColor}
                                 alt="Logo"
                             />
                             <X
