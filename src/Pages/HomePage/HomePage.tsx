@@ -14,6 +14,9 @@ import team1 from "../../assets/Images/team1.jpg";
 import team2 from "../../assets/Images/team2.jpg";
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
+import Project1 from '../../assets/Images/project1.jpg';
+import Project2 from '../../assets/Images/project2.jpg';
+import Project3 from '../../assets/Images/project3.jpg';
 
 interface HomePageProps {
 
@@ -25,6 +28,12 @@ const HomePage: React.FC<HomePageProps> = () => {
         triggerOnce: true,
         threshold: 0.5,
     });
+
+    const { ref: bref, inView: binView } = useInView({
+        triggerOnce: true,
+        threshold: 0.5,
+    });
+
 
 
     return (
@@ -98,6 +107,7 @@ const HomePage: React.FC<HomePageProps> = () => {
                     </div>
                 </div>
             </div>
+
             <div className='w-10/10 pb-10 lg:pb-20 flex flex-col justify-center items-center'>
                 <h3 className="inline-block border border-[#0067fc] text-[#0067fc] text-xl font-semibold rounded px-6 py-1 uppercase">
                     Services
@@ -184,7 +194,7 @@ const HomePage: React.FC<HomePageProps> = () => {
                 background: `url("${Banner4}")`,
                 backgroundSize: 'zoom',
                 backgroundPosition: 'start'
-            }} className='w-10/10 h-auto mb-20 flex flex-col justify-center items-center pt-30'>
+            }} className='w-10/10 h-auto flex flex-col justify-center items-center pt-30'>
                 <div className='w-8/10 md:w-6/10 lg:w-4/10'>
                     <h3 className="inline-block border border-white text-white text-xl font-semibold rounded px-6 py-1 uppercase">
                         How it works
@@ -229,6 +239,93 @@ const HomePage: React.FC<HomePageProps> = () => {
                     </div>
                 </div>
             </div>
+
+
+            <div className="w-full py-20 flex justify-center items-center bg-[#f0f2f4] gap-10">
+                <div className="w-9/10 flex flex-col lg:flex-row gap-10">
+                    <div className="w-10/10 md:w-6/10 lg:w-4/10 block lg:sticky top-20 h-fit">
+                        <div className="p-8 rounded-2xl">
+                            <h3 className="inline-block border border-[#0067fc] uppercase text-[#0067fc] text-xl font-semibold rounded px-6 py-1">
+                                Latest Projects
+                            </h3>
+                            <div className='mt-5 text-[#110e28] text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
+                                Best projects for intelligent
+                            </div>
+                            <div ref={bref} className="mt-15 w-70 text-center py-3 rounded-2xl bg-[red] text-white font-bold text-6xl  bg-[linear-gradient(166deg,#13102A_0%,#090976_54%,#0067FC_100%)]">
+                                <CountUp start={binView ? 0 : undefined} end={2650} duration={2} suffix="+" />
+                            </div>
+                            <div className='mt-5 text-[#110e28] text-2xl font-semibold'>
+                                Finished creative projects successfully using AI support
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* RIGHT Scroll Section */}
+                    <div className="w-10/10 lg:w-6/10 flex flex-col gap-8">
+                        <div className="p-5 md:p-10 bg-white rounded-2xl shadow h-auto flex gap-5">
+                            <div className='w-5/10'>
+                                <img src={Project3} className='rounded-2xl object-center' alt="project1" />
+                            </div>
+                            <div className='w-5/10 flex flex-col justify-between'>
+                                <div className='text-[#110e28] text-lg md:text-2xl font-semibold'>
+                                    Intelligent predictive maintenance system for industrial machinery
+                                </div>
+                                <div>
+                                    <div className='text-sm text-[#086cfc] font-semibold mt-5 flex gap-2 uppercase cursor-pointer'>
+                                        Explore More <ArrowUpRight />
+                                    </div>
+                                    <div className='mt-5 flex gap-3 flex-wrap'>
+                                        <div className='rounded-lg inline-block py-1 px-3 border border-[#086cfc] text-[#60616c] text-xs md:text-sm'>Artificial</div>
+                                        <div className='rounded-lg inline-block py-1 px-3 border border-[#086cfc] text-[#60616c] text-xs md:text-sm'>Technology</div>
+                                        <div className='rounded-lg inline-block py-1 px-3 border border-[#086cfc] text-[#60616c] text-xs md:text-sm'>Machine</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="p-5 md:p-10 bg-white rounded-2xl shadow h-auto flex gap-5">
+                            <div className='w-5/10'>
+                                <img src={Project2} className='rounded-2xl object-center' alt="project1" />
+                            </div>
+                            <div className='w-5/10 flex flex-col justify-between'>
+                                <div className='text-[#110e28] text-lg md:text-2xl font-semibold'>
+                                    Advanced predictive maintenance for tech driven AI machinery
+                                </div>
+                                <div>
+                                    <div className='text-sm text-[#086cfc] font-semibold mt-5 flex gap-2 uppercase cursor-pointer'>
+                                        Explore More <ArrowUpRight />
+                                    </div>
+                                    <div className='mt-5 flex gap-3 flex-wrap'>
+                                        <div className='rounded-lg inline-block py-1 px-3 border border-[#086cfc] text-[#60616c] text-xs md:text-sm'>Artificial</div>
+                                        <div className='rounded-lg inline-block py-1 px-3 border border-[#086cfc] text-[#60616c] text-xs md:text-sm'>Technology</div>
+                                        <div className='rounded-lg inline-block py-1 px-3 border border-[#086cfc] text-[#60616c] text-xs md:text-sm'>Machine</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="p-5 md:p-10 bg-white rounded-2xl shadow h-auto flex gap-5">
+                            <div className='w-5/10'>
+                                <img src={Project1} className='rounded-2xl object-center' alt="project1" />
+                            </div>
+                            <div className='w-5/10 flex flex-col justify-between'>
+                                <div className='text-[#110e28] text-lg md:text-2xl font-semibold'>
+                                    Automated predictive maintenance system for industrial assets
+                                </div>
+                                <div>
+                                    <div className='text-sm text-[#086cfc] font-semibold mt-5 flex gap-2 uppercase cursor-pointer'>
+                                        Explore More <ArrowUpRight />
+                                    </div>
+                                    <div className='mt-5 flex gap-3 flex-wrap'>
+                                        <div className='rounded-lg inline-block py-1 px-3 border border-[#086cfc] text-[#60616c] text-xs md:text-sm'>Artificial</div>
+                                        <div className='rounded-lg inline-block py-1 px-3 border border-[#086cfc] text-[#60616c] text-xs md:text-sm'>Technology</div>
+                                        <div className='rounded-lg inline-block py-1 px-3 border border-[#086cfc] text-[#60616c] text-xs md:text-sm'>Machine</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div >
     );
 };
