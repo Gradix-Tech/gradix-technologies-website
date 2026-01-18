@@ -92,9 +92,15 @@ const NavBar: React.FC = () => {
                             }`}
                     >
                         {/* Close Button */}
-                        <div className="flex justify-end">
+                        <div className="flex justify-between items-center">
+                            <img
+                                className="h-15 cursor-pointer"
+                                onClick={() => handleNavigate("/")}
+                                src={scrolled ? LogoColor : Logo}
+                                alt="Logo"
+                            />
                             <X
-                                className="w-7 h-7 cursor-pointer text-black"
+                                className="w-5 h-5 cursor-pointer text-black"
                                 onClick={() => setMenuOpen(false)}
                             />
                         </div>

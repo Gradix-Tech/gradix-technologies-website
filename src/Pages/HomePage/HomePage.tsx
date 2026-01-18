@@ -262,11 +262,11 @@ const HomePage: React.FC<HomePageProps> = () => {
 
                     {/* RIGHT Scroll Section */}
                     <div className="w-10/10 lg:w-6/10 flex flex-col gap-8">
-                        <div className="p-5 md:p-10 bg-white rounded-2xl shadow h-auto flex gap-5">
-                            <div className='w-5/10'>
+                        <div className="p-5 md:p-10 bg-white rounded-2xl shadow h-auto flex gap-5 flex-col md:flex-row">
+                            <div className='w-10/10 md:w-5/10'>
                                 <img src={Project3} className='rounded-2xl object-center' alt="project1" />
                             </div>
-                            <div className='w-5/10 flex flex-col justify-between'>
+                            <div className='w-10/10 md:w-5/10 flex flex-col justify-between'>
                                 <div className='text-[#110e28] text-lg md:text-2xl font-semibold'>
                                     Intelligent predictive maintenance system for industrial machinery
                                 </div>
@@ -282,11 +282,11 @@ const HomePage: React.FC<HomePageProps> = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="p-5 md:p-10 bg-white rounded-2xl shadow h-auto flex gap-5">
-                            <div className='w-5/10'>
+                        <div className="p-5 md:p-10 bg-white rounded-2xl shadow h-auto flex gap-5 flex-col md:flex-row">
+                            <div className='w-10/10 md:w-5/10'>
                                 <img src={Project2} className='rounded-2xl object-center' alt="project1" />
                             </div>
-                            <div className='w-5/10 flex flex-col justify-between'>
+                            <div className='w-10/10 md:w-5/10 flex flex-col justify-between'>
                                 <div className='text-[#110e28] text-lg md:text-2xl font-semibold'>
                                     Advanced predictive maintenance for tech driven AI machinery
                                 </div>
@@ -302,11 +302,11 @@ const HomePage: React.FC<HomePageProps> = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="p-5 md:p-10 bg-white rounded-2xl shadow h-auto flex gap-5">
-                            <div className='w-5/10'>
+                        <div className="p-5 md:p-10 bg-white rounded-2xl shadow h-auto flex gap-5 flex-col md:flex-row">
+                            <div className='w-10/10 md:w-5/10'>
                                 <img src={Project1} className='rounded-2xl object-center' alt="project1" />
                             </div>
-                            <div className='w-5/10 flex flex-col justify-between'>
+                            <div className='w-10/10 md:w-5/10 flex flex-col justify-between'>
                                 <div className='text-[#110e28] text-lg md:text-2xl font-semibold'>
                                     Automated predictive maintenance system for industrial assets
                                 </div>
