@@ -17,6 +17,9 @@ import { useInView } from 'react-intersection-observer';
 import Project1 from '../../assets/Images/project1.jpg';
 import Project2 from '../../assets/Images/project2.jpg';
 import Project3 from '../../assets/Images/project3.jpg';
+import UserFab from '../../Components/Fab/UserFab';
+import face from "../../assets/Images/face.png";
+import TestimonialSlider from '../../Components/TestimonialCard/TestimonialCard';
 
 interface HomePageProps {
 
@@ -34,6 +37,24 @@ const HomePage: React.FC<HomePageProps> = () => {
         threshold: 0.5,
     });
 
+    const reviews = [
+        {
+            name: "Kevin Martin",
+            rating: 4.5,
+            description:
+                "Mentioning consultation discover apartments. ndulgence off under folly death is wrote causes maintaing way spite. Plan upon yet way get coldest spot its week. Almost do am or limits hearts resolve parties the regular intension the environment.",
+        },
+        {
+            name: "Michel Dark",
+            rating: 5,
+            description: "Targeting consultation discover apartments. ndulgence off under folly death is wrote causes maintaing way spite. Plan upon yet way get coldest spot its week. Almost do am or limits hearts resolve parties the regular intension the environment.",
+        },
+        {
+            name: "Sara Smith",
+            rating: 4,
+            description: "Very professional team and good delivery.",
+        },
+    ];
 
 
     return (
@@ -260,7 +281,6 @@ const HomePage: React.FC<HomePageProps> = () => {
                         </div>
                     </div>
 
-                    {/* RIGHT Scroll Section */}
                     <div className="w-10/10 lg:w-6/10 flex flex-col gap-8">
                         <div className="p-5 md:p-10 bg-white rounded-2xl shadow h-auto flex gap-5 flex-col md:flex-row">
                             <div className='w-10/10 md:w-5/10'>
@@ -321,6 +341,80 @@ const HomePage: React.FC<HomePageProps> = () => {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className='w-10/10 py-10 lg:py-20 flex flex-col justify-center items-center'>
+                <h3 className="inline-block border border-[#0067fc] text-[#0067fc] text-xl font-semibold rounded px-6 py-1 uppercase">
+                    AI Developer
+                </h3>
+                <div className='w-9/10 lg:w-5/10 mt-5 text-center text-[#110e28] text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
+                    Meet our talent for the intelligent solutions
+                </div>
+                <div className='w-9/10 mt-10 flex flex-col lg:flex-row items-start'>
+                    <div className='w-10/10 lg:w-2/10 flex flex-col justify-center items-center'>
+                        <div className="w-full flex justify-center">
+                            <UserFab profileImageUrl={team2} imageSize="h-50 lg:h-50" />
+                        </div>
+                        <div className='text-[#110e28] text-lg md:text-2xl font-semibold mt-10'>
+                            Aleesha Brown
+                        </div>
+                        <div className=' text-[#70717b] text-sm md:text-lg font-normal'>
+                            Ai Programmer
+                        </div>
+                    </div>
+                    <div className='w-10/10 lg:w-3/10 p-10 flex flex-col justify-center items-center'>
+                        <div className="w-full flex justify-center">
+                            <UserFab profileImageUrl={team1} imageSize="h-50 lg:h-70" />
+                        </div>
+                        <div className='text-[#110e28] text-lg md:text-2xl font-semibold mt-10'>
+                            Aleesha Brown
+                        </div>
+                        <div className=' text-[#70717b] text-sm md:text-lg font-normal'>
+                            Ai Programmer
+                        </div>
+                    </div>
+                    <div className='w-10/10 lg:w-2/10 flex flex-col justify-center items-center'>
+                        <div className="w-full flex justify-center">
+                            <UserFab profileImageUrl={team2} imageSize="h-50 lg:h-50" />
+                        </div>
+                        <div className='text-[#110e28] text-lg md:text-2xl font-semibold mt-10'>
+                            Aleesha Brown
+                        </div>
+                        <div className=' text-[#70717b] text-sm md:text-lg font-normal'>
+                            Ai Programmer
+                        </div>
+                    </div>
+                    <div className='w-10/10 lg:w-3/10 p-10 flex flex-col items-center'>
+                        <div className="w-full flex justify-center">
+                            <UserFab profileImageUrl={team1} imageSize="h-50 lg:h-70" />
+                        </div>
+                        <div className='text-[#110e28] text-lg md:text-2xl font-semibold mt-10'>
+                            Aleesha Brown
+                        </div>
+                        <div className=' text-[#70717b] text-sm md:text-lg font-normal'>
+                            Ai Programmer
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className='mb-10 lg:mb-20 w-10/10 h-auto py-20 lg:py-0 lg:h-screen bg-[linear-gradient(115deg,#004769,#000000)] flex justify-center items-center'>
+                <div className='w-9/10 flex flex-col lg:flex-row gap-10 justify-between'>
+                    <div className='w-10/10 lg:w-4/10 flex justify-center items-center'>
+                        <img className='w-8/10 sm:4/10 lg:w-10/10' src={face} alt="face" />
+                    </div>
+                    <div className='w-10/10 lg:w-5/10 flex flex-col justify-center items-start'>
+                        <h3 className="inline-block border border-[#0067fc] text-[#0067fc] text-xl font-semibold rounded px-6 py-1 uppercase">
+                            Testimonials
+                        </h3>
+                        <div className='mt-5 text-center text-white text-3xl md:text-5xl font-semibold leading-10 md:leading-15 tracking-wider'>
+                            What People Say
+                        </div>
+                        <div className='w-10/10'>
+                            <TestimonialSlider reviews={reviews} />
                         </div>
                     </div>
                 </div>
